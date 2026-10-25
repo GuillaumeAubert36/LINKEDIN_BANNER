@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Banner Pro</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Main container - LinkedIn format */
+        .banner {
+            width: 1584px;
+            height: 396px;
+            background: #0a0a0a;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* --- DECORATIONS (sobres, style Hasheur) --- */
+        .glow-circle {
+            position: absolute;
+            top: -200px;
+            right: -100px;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(139, 61, 255, 0.10) 0%, transparent 65%);
+            border-radius: 50%;
+        }
+
+        .glow-left {
+            position: absolute;
+            bottom: -250px;
+            left: -150px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 61, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        /* --- MAIN CONTENT --- */
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Name (style Hasheur : blanc / violet) */
+        .name {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 22px;
+            font-size: 96px;
+            font-weight: 800;
+            letter-spacing: -3px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .name .white {
+            color: #ffffff;
+        }
+
+        .name .purple {
+            color: #8b3dff;
+            text-shadow: 0 0 40px rgba(139, 61, 255, 0.3);
+        }
+
+        /* Title pill (plus discret, comme le sous-titre Hasheur) */
+        .title-pill {
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            color: #d4d4d4;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .title-pill span.sep {
+            color: #6b6b6b;
+            font-weight: 300;
+        }
+
+        .title-pill span.code-icon {
+            color: #8b3dff;
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Headline */
+        .headline {
+            font-size: 22px;
+            font-weight: 300;
+            color: #a3a3a3;
+            letter-spacing: 0.3px;
+            max-width: 900px;
+            line-height: 1.5;
+            margin-bottom: 22px;
+        }
+
+        .headline strong {
+            font-weight: 600;
+            color: #c084fc;
+        }
+
+        /* Badges */
+        .badges-container {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 14px;
+        }
+
+        .badge {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #a3a3a3;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge.highlight {
+            color: #ffffff;
+            background: linear-gradient(90deg, #7c3aed 0%, #8b3dff 100%);
+            padding: 8px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 0 30px rgba(139, 61, 255, 0.25);
+        }
+
+        .badge.highlight:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 40px rgba(139, 61, 255, 0.5);
+        }
+
+        /* Email */
+        .email {
+            font-size: 14px;
+            color: #737373;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .email:hover {
+            color: #ffffff;
+        }
+
+        .email::before {
+            content: "✉ ";
+            font-size: 13px;
+            color: #8b3dff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <!-- Decorations -->
+        <div class="glow-circle"></div>
+        <div class="glow-left"></div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="name">
+                <span class="white">Guillaume</span>
+                <span class="purple">Aubert</span>
+            </div>
+
+            <div class="title-pill">
+                <span class="code-icon">&lt;/&gt;</span>
+                <span>Senior Full Stack Software Engineer</span>
+                <span class="sep">|</span>
+                <span>.NET / React</span>
+            </div>
+
+            <div class="headline">
+                I turn your business challenges into <strong>high-performing applications</strong>
+            </div>
+
+            <div class="badges-container">
+                <div class="badge">
+                    <span>★</span> 6+ Years of Experience
+                </div>
+                <div class="badge highlight">
+                    Let's talk about your project <span>→</span>
+                </div>
+            </div>
+
+            <a href="mailto:aubert.guillaume36@gmail.com" class="email">
+                aubert.guillaume36@gmail.com
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
